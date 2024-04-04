@@ -1,6 +1,7 @@
 rulesBtn = document.getElementById('rules-btn')
 rules = document.getElementById('rules')
 closeBtn = document.getElementById('close-btn')
+startBtn = document.getElementById('start-btn')
 
 // game interaction
 canvas = document.getElementById('canvas')
@@ -103,6 +104,8 @@ function movePaddle () {
     }
 }
 
+
+
 // detect input from user
 function keyDown(e) {
     if (e.key == 'ArrowRight' || e.key == 'Right') {
@@ -130,6 +133,7 @@ function moveBall() {
     }
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
+        showAllBricks()
     }
 
     if (ball.x + ball.size > canvas.width) {
@@ -138,17 +142,51 @@ function moveBall() {
     if (ball.x - ball.size < 0) {
         ball.dx = -1 * ball.dx
     }
+    //paddle collision
+    if (ball.x - ball.size > paddle.x && ball.x + ball.size < paddle.x + paddle.w && ball.y + ball.size > paddle.y) {
+        ball.dy = -1 * ball.speed
+    }
+    //brick collision
+    bricks.forEach(column => {
+        column.forEach(brick => {
+            if (brick.visible) {
+                if (ball.x - ball.size > brick.x && ball.x + ball.size < brick.x + brick.w && ball.y - ball.size < brick.y + brick.h && ball.y + ball.size > brick.y) {
+                    ball.dy = -1 * ball.dy
+                    brick.visible = false
+                    increaseScore()
+                }
+            }
+        })
+    })
 }
 
+function increaseScore() {
+    score++
+    if (score == rowCount * columnCount) {
+        score = 0
+        showAllBricks()
+    }
+}
+
+function showAllBricks() {
+    bricks.forEach(column => {
+        column.forEach(brick => {
+            brick.visible = true
+            score = 0
+        })
+    })
+}
+
+
+
 // draw new frame
+
 function update() {
     moveBall()
     movePaddle()
     draw()
     requestAnimationFrame(update)
 }
-
-update()
 
 // rules interaction
 rulesBtn.addEventListener('click', () => {
@@ -158,3 +196,10 @@ rulesBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     rules.classList.remove('show')
 })
+
+startBtn.addEventListener('click', () => {
+    update()
+    element = document.getElementById("start-btn")
+    element.innerHTML = "increase challenge"
+})
+
