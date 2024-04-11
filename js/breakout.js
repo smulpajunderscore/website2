@@ -172,7 +172,9 @@ function showAllBricks() {
     bricks.forEach(column => {
         column.forEach(brick => {
             brick.visible = true
-            score = 0
+            ball.dx = 0
+            ball.dy = 0
+            paddle.speed = 0
         })
     })
 }
@@ -200,6 +202,11 @@ closeBtn.addEventListener('click', () => {
 startBtn.addEventListener('click', () => {
     update()
     element = document.getElementById("start-btn")
-    element.innerHTML = "increase challenge"
+    ball.x = 4
+    ball.y = -4
+    ball.x = canvas.width/2
+    ball.y = canvas.height/2
+    paddle.speed = 8
+    score = 0
 })
 
