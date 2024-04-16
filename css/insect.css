@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: margin 0.5s ease-in;
 }
 
 .btn {
@@ -106,10 +107,13 @@ h1 {
     position: absolute;
     top: 0;
     left: 50%;
+    opacity: 0;
     transform: translate(-50%, 150%);
-    transition: transform 0.5s ease-in
+    transition: transform: 0.5s ease-in
 }
+
 .message.visible {
+    opacity: 1;
     transform: translate(-50%, 150%);
 }
 
@@ -122,6 +126,6 @@ h1 {
     height: 96px;
     top: 128px;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform: 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
