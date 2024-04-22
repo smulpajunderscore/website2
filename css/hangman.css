@@ -9,6 +9,19 @@ body {
     color: #000000;
     font-family: "VT323", monospace;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 16px 0 0;
+}
+
+game-container {
+    padding: 
 }
 
 .figure-container {
