@@ -24,7 +24,8 @@ game-container {
     padding: 24px 32px;
     position: relative;
     margin: auto;
-    height:
+    height: 320px;
+    width: 448px;
 }
 
 .figure-container {
@@ -36,4 +37,8 @@ game-container {
 
 .figure-part {
     display: none;
+}
+
+.wrong-letters-container {
+    
 }
