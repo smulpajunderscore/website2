@@ -74,3 +74,7 @@ h1 {
     margin: 0 2px;
     border-bottom: 2px solid #848484;
 }
+
+.popup-containter popup {
+    align-items: center;
+}
