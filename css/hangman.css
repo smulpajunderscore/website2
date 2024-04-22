@@ -8,6 +8,7 @@ body {
     background-color: #FFFFFF;
     color: #000000;
     font-family: "VT323", monospace;
+    display: flex;
 }
 
 .figure-container {
