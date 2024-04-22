@@ -20,7 +20,7 @@ h1 {
     margin: 16px 0 0;
 }
 
-game-container {
+.game-container {
     padding: 24px 32px;
     position: relative;
     margin: auto;
@@ -65,12 +65,12 @@ game-container {
 }
 
 .letter {
-    font-size: 30px;
+    font-size: 24px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 20px;
-    margin: 0 3px;
-    border-bottom: 3px solid #848484;
+    height: 48px;
+    width: 16px;
+    margin: 0 2px;
+    border-bottom: 2px solid #848484;
 }
