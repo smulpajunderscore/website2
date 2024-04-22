@@ -40,5 +40,10 @@ game-container {
 }
 
 .wrong-letters-container {
-    
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
 }
