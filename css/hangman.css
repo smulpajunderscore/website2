@@ -11,27 +11,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: 75vh;
     margin: 0;
     overflow: hidden;
 }
 
 h1 {
-    margin: 16px 0 0;
+    margin: 15px 0 0;
 }
 
 .game-container {
-    padding: 24px 32px;
+    padding: 25px 30px;
     position: relative;
     margin: auto;
-    height: 320px;
-    width: 448px;
+    height: 300px;
+    width: 450px;
 }
 
 .figure-container {
     fill: transparent;
     stroke: #000000;
-    stroke-width: 4px;
+    stroke-width: 5px;
     stroke-linecap: round;
 }
 
@@ -41,8 +41,8 @@ h1 {
 
 .wrong-letters-container {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 15px;
+    right: 15px;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -53,28 +53,77 @@ h1 {
 }
 
 .wrong-letters-container span {
-    font-size: 24px;
+    font-size: 25px;
 }
 
 .word {
     display: flex;
     position: absolute;
-    bottom: 8px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .letter {
-    font-size: 24px;
+    font-size: 25px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 48px;
-    width: 16px;
+    height: 50px;
+    width: 15px;
     margin: 0 2px;
     border-bottom: 2px solid #848484;
 }
 
-.popup-containter popup {
+.popup-container {
+    background-color: rgba(0,0,0,0.25);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    display: none;
     align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #c4b78b;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px 2px rgba(0,0,0,0.1)
+    padding: 20px;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background: #ffffff;
+    color: #8f8061;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    font-family: "VT323", monospace;
+}
+
+.popup button:active {
+    transform: scale(0.95)
+}
+
+.notif-container {
+    background-color: rgba(0,0,0,0.25);
+    position: absolute;
+    padding: 10px 20px;
+    bottom: -50px;
+    transition: transform 0.25s ease-in-out;
+}
+
+.notif-container p {
+    margin: 0;
+}
+
+.notif-container.show {
+    transform: translateY(-50px);
 }
