@@ -9,8 +9,8 @@ const word =['application', 'programming', 'interface', 'wizard']
 
 let selectedIndex = Math.floor (word.length * Math.random())
 let selectedWord = word[selectedIndex]
-const correctLetters = ['a']
-const wrongLetters = ['b']
+const correctLetters = []
+const wrongLetters = []
 
 function displayWord() {
     wordEl.innerHTML = `${selectedWord.split('').map(letter =>
