@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message')
 const figureParts = document.querySelectorAll('.figure-part')
 let endState = false;
 
-const word = ['clay', 'concrete', 'egineering', 'sand lime']
+const word = ['clay', 'concrete', 'egineering', 'sandlime']
 
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
