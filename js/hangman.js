@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message')
 const figureParts = document.querySelectorAll('.figure-part')
 let endState = false;
 
-const word = ['aplication', 'programing', 'interface', 'wizard']
+const word = ['clay', 'concrete', 'egineering', 'sand lime']
 
 let selectedIndex = Math.floor(word.length * Math.random())
 let selectedWord = word[selectedIndex]
@@ -31,7 +31,7 @@ function displayWord(){
     const innerWord=wordEl.innerText.replace(/\n/g, '')
 
     if(innerWord == selectedWord){
-        finalMessage.innerText = 'Congratulations You won!'
+        finalMessage.innerText = 'well done!!'
         popup.style.display = 'flex'
         endState = true;
     }

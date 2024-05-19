@@ -89,18 +89,18 @@ h1{
 
 .popup
 {
-    background: yellow;
-    border-radius: 5px;
-    box-shadow: 0 15px 10px 3px rgba(0,0,0,0.5);
+    background: #424242;
+    border-radius: 2px;
+    box-shadow: 0 0px 2px 2px rgba(0,0,0,0.5);
     padding: 20px;
     text-align: center;
 }
 
 .popup button
 {
-    cursor: grab;
-    background-color: grey;
-    color: yellow;
+    cursor: pointer;
+    background-color: #828282;
+    color: #ffffff;
     margin-top: 20px;
     padding: 12px 20px;
     font-size: 16px;
@@ -116,7 +116,7 @@ h1{
     background-color: rgba(0,0,0,0.5);
     color: white;
     padding: 15px 20px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 2px 2px 0 0;
     position: absolute;
     bottom: -500px;
     transition: transform 0.3s ease-in-out;
