@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insect</title>
+    <title>catch the insect</title>
     <link rel="stylesheet" href="css/insect.css">
 </head>
 <body>
     <div class="screen">
-        <h1>hydra horde!!</h1>
-        <button class="btn" id="start-btn">play game</button>
+        <h1>catch The Insect</h1>
+        <button class="btn" id="start-btn">Play Game</button>
     </div>
 
     <div class="screen">
-        <h1>pick a critter to eradicate!!</h1>
+        <h1>What is your "favorite" insect?</h1>
         <ul class="insects-list">
-            <button class="select">
-                <p>specimen</p>
-                <img src="css/images/seacreature_again.png" alt="specimen">
-            </button>
-            <button class="select">
-                <p>seal!</p>
-                <img src="css/images/niko-toba-aquarium.gif" alt="seal!">
-            </button>
-            <button class="select">
-                <p></p>
-                <img src="css/images/" alt="">
-            </button>
-            <button class="select">
-                <p></p>
-                <img src="css/images/" alt="">
-            </button>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Fly</p>
+                    <img src="images/fly.png" alt="fly">
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Mosquito</p>
+                    <img src="images/mosquito.png" alt="mosquito">
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Spider</p>
+                    <img src="images/spider.png" alt="spider">
+                </button>
+            </li>
+            <li>
+                <button class="choose-insect-btn">
+                    <p>Roach</p>
+                    <img src="images/roach.png" alt="roach">
+                </button>
+            </li>
         </ul>
     </div>
 
     <div class="screen game-container" id="game-container">
-        <h3 class="time" id="time">time: 00:00</h3>
-        <h3 class="score" id="score">score: 0</h3>
-        <h5 class="message" id="message">u mad bro?<br>the horde never ends!!</h3>
+        <h3 class="time" id="time">Time: 00:00</h3>
+        <h3 id="score" class="score">Score: 0</h3>
+        <h5 id="message" class="message">
+            Are you annoyed yet? <br>
+              You are playing an impossible game!!
+        </h5>
     </div>
-    <script src="js/insect.js"></script>
 </body>
+<script src="js/insect.js"></script>
 </html>
