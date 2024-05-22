@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    font-family: "VT323", monospace;
+    font-size: 12;
+    border: 0;
+    height: 24px;
+    width: 64px;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+    position: relative;
+    background-color: #949494;
+}
