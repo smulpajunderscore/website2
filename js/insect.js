@@ -42,6 +42,9 @@ function increaseTime() {
 
     timeEl.innerHTML = `Time: ${m}:${s}`
     seconds++
+    if (score > 60 && seconds < 29) {
+        document.getElementById("message").innerHTML = "you win!!";
+    }
 }
 
 function createInsect() {
@@ -67,6 +70,10 @@ function catchInsect() {
 function addInsects() {
     setTimeout(createInsect, 1000)
     setTimeout(createInsect, 1500)
+    setTimeout(createInsect, 1500)
+    setTimeout(createInsect, 1500)
+    setTimeout(createInsect, 1500)
+
 }
 
 function increaseScore() {
@@ -74,9 +81,7 @@ function increaseScore() {
     if (score > 19) {
         message.classList.add('visible')
     }
-    if (score > 30 && seconds < 29) {
-        document.getElementById("message").innerHTML = "you win!!";
-    }
+
     scoreEl.innerHTML = `score: ${score}`
 }
 
