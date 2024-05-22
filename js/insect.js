@@ -21,10 +21,6 @@ choose_insect_btns.forEach(btn => {
         screens[1].classList.add('up')
         selected_insect = {src, alt}
         setTimeout(createInsect, 1000)
-        createInsect
-        createInsect
-        createInsect
-
         startGame()
     })
 })
@@ -78,7 +74,7 @@ function increaseScore() {
     if (score > 19) {
         message.classList.add('visible')
     }
-    if (score > 60 && seconds < 29) {
+    if (score > 30 && seconds < 29) {
         document.getElementById("message").innerHTML = "you win!!";
     }
     scoreEl.innerHTML = `score: ${score}`
