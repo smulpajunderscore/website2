@@ -133,7 +133,7 @@ function moveBall() {
     }
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
-        showAllBricks()
+        endGame()
     }
 
     if (ball.x + ball.size > canvas.width) {
@@ -172,12 +172,20 @@ function showAllBricks() {
     bricks.forEach(column => {
         column.forEach(brick => {
             brick.visible = true
+        })
+    })
+}
+
+function endGame() {
+    bricks.forEach(column => {
+        column.forEach(brick => {
             ball.dx = 0
             ball.dy = 0
             paddle.speed = 0
         })
     })
 }
+
 
 
 
@@ -200,8 +208,8 @@ closeBtn.addEventListener('click', () => {
 })
 
 startBtn.addEventListener('click', () => {
+    showAllBricks()
     update()
-
     element = document.getElementById("start-btn")
     ball.x = 4
     ball.y = -4
