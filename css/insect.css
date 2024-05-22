@@ -1,28 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
-    background-color: #d8d8d8;
-    color: #A03030;
+    background-color: #516dff;
+    color: #ffffff;
     font-family: "VT323", monospace;
     height: 100vh;
     overflow: hidden;
     text-align: center;
-    margin: 0;
 }
 
-.select img {
-    width: 96px;
-    height: 96px;
+.choose-insect-btn img {
+    width: 100px;
+    height: 88px;
     object-fit: contain;
 }
 
 .screen {
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,11 +30,11 @@ body {
 
 .btn {
     border: 0;
-    background-color: #A03030;
-    color: #d8d8d8;
-    padding: 16px 24px;
+    background-color: #ffffff;
+    color: #516dff;
+    padding: 15px 20px;
     cursor: pointer;
-    font-family: "VT323", monospace;
+    font-family: inherit;
 }
 
 .btn:hover {
@@ -48,68 +46,73 @@ body {
 }
 
 a {
-    color: #d8d8d8;
+    color: white;
 }
+
 h1 {
     line-height: 1.4;
 }
 
-/* LIST OF INSECTS */
 .insects-list {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     justify-content: center;
-    padding: 0px;
-}
-.insects-list li {
-    margin: 8px;
+    padding: 0;
 }
 
-/* SELECT CRITTER */
-.select {
+.insects-list li {
+    margin: 10ps;
+}
+
+.choose-insect-btn {
     background-color: transparent;
-    border: 2px solid #D05045;
-    color: #D05045;
-    font-family: "VT323", monospace;
-    width: 128px;
-    height: 128px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    width: 150px;
+    height: 150px;
 }
-.select:hover {
-    background-color: #D05045;
-    color: #d8d8d8;
+
+.choose-insect-btn:hover {
+    background-color: #ffffff;
+    color: #516dff;
 }
-.select:active {
-    background-color: #A03030
+
+.choose-insect-btn:active {
+    background-color: rgba(255,255,255, 0.7);
 }
 
 .game-container {
     position: relative;
 }
+
 .time {
     position: absolute;
-    top: 16px;
-    left: 16px;
-}
-.score {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 20px;
+    left: 20px;
 }
 
-/* TAUNT */
+.score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 .message {
-    line-height: 1.5;
+    opacity: 0;
+    line-height: 1.7;
     width: 100%;
-    background-color: rgba(16,0,4,0.5);
-    z-index: 5;
-    padding: 16px;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: 100;
+    padding: 20px;
     text-align: center;
     position: absolute;
     top: 0;
     left: 50%;
-    opacity: 0;
     transform: translate(-50%, 150%);
-    transition: transform: 0.5s ease-in
+    transition: transform 0.4s ease-in;
 }
 
 .message.visible {
@@ -120,12 +123,20 @@ h1 {
 .insect {
     cursor: pointer;
     display: flex;
-    justify-items: center;
+    align-items: center;
     justify-content: center;
-    width: 96px;
-    height: 96px;
-    top: 128px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
+.insect.caught {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.insect img {
+    width: 100px;
+    height: 100px;
+}
