@@ -75,8 +75,8 @@ function increaseScore() {
     if (score > 19) {
         message.classList.add('visible')
     }
-    if (score > 59 && seconds < 29) {
-        
+    if (score > 1 && seconds < 29) {
+        document.getElementById("message").innerHTML = "you win!!";
     }
     scoreEl.innerHTML = `score: ${score}`
 }
