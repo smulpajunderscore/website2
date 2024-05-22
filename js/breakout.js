@@ -2,7 +2,7 @@ rulesBtn = document.getElementById('rules-btn')
 rules = document.getElementById('rules')
 closeBtn = document.getElementById('close-btn')
 startBtn = document.getElementById('start-btn')
-gameRunning = true
+var gameRunning = true;
 
 // game interaction
 canvas = document.getElementById('canvas')
@@ -134,7 +134,7 @@ function moveBall() {
     }
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
-        gameRunning = false
+        gameRunning = false;
     }
 
     if (ball.x + ball.size > canvas.width) {
@@ -185,7 +185,7 @@ function showAllBricks() {
 // draw new frame
 
 function update() {
-    if gameRunning = false {
+    if (gameRunning = false) {
         return 0;
     }
     moveBall()
@@ -204,8 +204,8 @@ closeBtn.addEventListener('click', () => {
 })
 
 startBtn.addEventListener('click', () => {
+    gameRunning = true;
     update()
-
     element = document.getElementById("start-btn")
     ball.x = 4
     ball.y = -4
