@@ -172,6 +172,9 @@ function showAllBricks() {
     bricks.forEach(column => {
         column.forEach(brick => {
             brick.visible = true
+            ball.dx = 4
+            ball.dy = -4
+            paddle.speed = 8
         })
     })
 }
